@@ -46,7 +46,7 @@ void printClasses()
 {
     sqlite3* db;
 
-    cStats stats = {0, 0, 0, 0};
+    //cStats stats = {0, 0, 0, 0};
 
     if (sqlite3_open(CLASSES_PATH, &db) != SQLITE_OK)
     {
