@@ -5,20 +5,20 @@
 
 using namespace std;
 
-typedef struct sStats {
+typedef struct sCharacterStats {
     int life;
     int attack;
     int defense;
     int speed;
     
-} Stats;
+} cStats;
 
 class Character {
 
 public:
     string name;
     int classId;
-    Stats stats;
+    cStats stats;
     string className;
 
     Character(string n, int cId);
@@ -28,8 +28,9 @@ public:
 };
 
 typedef struct sClassInfo {
-    std::string name;
-    Stats stats;
+    string name;
+    cStats stats;
+    
 } ClassInfo;
 
 #endif

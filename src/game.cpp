@@ -4,9 +4,9 @@
 #include <iostream>
 
 using namespace std;
-
 int main()
 {
+    srand(time(NULL));
     int op = homeMenu();
 
     if(op == 1)
