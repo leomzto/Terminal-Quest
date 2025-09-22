@@ -7,7 +7,7 @@ ClassInfo searchClassInDB(int classId)
     c.name = "";
     c.stats = {0,0,0,0};
     
-    if (sqlite3_open(CLASSES_PATH, &db))
+    if (sqlite3_open(CLASSES_PATH, &db) != SQLITE_OK)
     {
         cerr << "Erro ao abrir classes.db: " << sqlite3_errmsg(db) << endl;
         return c;
@@ -46,7 +46,7 @@ void printClasses()
 
     Stats stats = {0, 0, 0, 0};
 
-    if (sqlite3_open(CLASSES_PATH, &db))
+    if (sqlite3_open(CLASSES_PATH, &db) != SQLITE_OK)
     {
         cerr << "Erro ao abrir classes.db" << sqlite3_errmsg(db) << endl;
         return;
