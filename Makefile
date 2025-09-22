@@ -10,6 +10,7 @@ OBJS = $(SRCS:.cpp=.o)
 
 all: $(TARGET)
 
+
 $(TARGET): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(TARGET) $(LIBS)
 	@echo "Executavel criado."
